@@ -2,6 +2,7 @@ import { SAVE_NAME } from "../actionType";
 
 const initialState = {
     name: '',
+    resourceList: []
 };
 
 export default function FormReducer(state = initialState, action) {
@@ -10,7 +11,7 @@ export default function FormReducer(state = initialState, action) {
         case SAVE_NAME:
             return {
                 ...state,
-                name : action.payload,
+                resourceList : action.payload,
             };
 
         default : 

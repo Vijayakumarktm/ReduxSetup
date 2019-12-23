@@ -5,6 +5,9 @@ import { Scene, Router } from 'react-native-router-flux';
 import Form1Screen from './components/Form1Screen';
 import Form2Screen from './components/Form2Screen';
 import { bindActionCreators } from 'redux';
+import DashboardScreen from './components/DashboardScreen';
+import DownToUpPopupScreen from './components/DownToUpPopupScreen';
+import LoginScreen from './components/LoginScreen';
 
 class AppNavigator extends Component {
 
@@ -23,7 +26,10 @@ class AppNavigator extends Component {
             <View style={{flex : 1}}>
                 <Router>
                     <Scene key="root" hideNavBar>
-                        <Scene key="Form1Screen" component={Form1Screen} initial/>
+                        <Scene key="LoginScreen" component={LoginScreen} initial/>
+                        <Scene key="DownToUpPopUpScreen" component={DownToUpPopupScreen} />
+                        <Scene key="DashboardScreen" component={DashboardScreen}/>
+                        <Scene key="Form1Screen" component={Form1Screen}/>
                         <Scene key="Form2Screen" component={Form2Screen}/>
                     </Scene>
                 </Router>
