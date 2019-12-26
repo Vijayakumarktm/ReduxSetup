@@ -8,6 +8,9 @@ import { bindActionCreators } from 'redux';
 import DashboardScreen from './components/DashboardScreen';
 import DownToUpPopupScreen from './components/DownToUpPopupScreen';
 import LoginScreen from './components/LoginScreen';
+import CardScreen from './components/CardScreen';
+import FlatListScreen from './components/FlatListScreen';
+import DashboardMenu from './components/DashboardMenu';
 
 class AppNavigator extends Component {
 
@@ -26,7 +29,10 @@ class AppNavigator extends Component {
             <View style={{flex : 1}}>
                 <Router>
                     <Scene key="root" hideNavBar>
-                        <Scene key="LoginScreen" component={LoginScreen} initial/>
+                        <Scene key="DashboardMenu" component={DashboardMenu} initial/>
+                        <Scene key="FlatListScreen" component={FlatListScreen} />
+                        <Scene key="CardScreen" component={CardScreen} />
+                        <Scene key="LoginScreen" component={LoginScreen} />
                         <Scene key="DownToUpPopUpScreen" component={DownToUpPopupScreen} />
                         <Scene key="DashboardScreen" component={DashboardScreen}/>
                         <Scene key="Form1Screen" component={Form1Screen}/>
